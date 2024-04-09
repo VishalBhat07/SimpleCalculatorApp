@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background-color: hsl(0, 0%, 95%); */
+  background-color: hsl(0, 5%, 9%);
+}
+
+#calculator {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: hsl(0, 0%, 15%);
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 0.5px solid rgb(99, 95, 95);
+}
+
+#display {
+  padding: 20px;
+  font-size: 5rem;
+  border: none;
+  width: 100%;
+  text-align: left;
+  background-color: hsl(0, 0%, 20%);
+  color: white;
+  border-bottom: 0.5px solid rgb(99, 95, 95);
+}
+
+#keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 25px;
+}
+
+button {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: none;
+  background-color: hsl(0, 0%, 30%);
+  color: white;
+  font-weight: bold;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: hsl(0, 0%, 40%);
+}
+
+button:active {
+  background-color: hsl(0, 0%, 50%);
+}
+
+.operator-button {
+  background-color: hsl(35, 100%, 55%);
+}
+
+.operator-button:hover {
+  background-color: hsl(35, 100%, 65%);
+}
+
+.operator-button:active {
+  background-color: hsl(35, 100%, 75%);
+}
+
+/* Responsive Styling */
+@media only screen and (max-width: 600px) {
+  #calculator {
+    max-width: 90vw;
+  }
+
+  #display {
+    font-size: 3rem;
+  }
+
+  #keys {
+    padding: 15px;
+    gap: 5px;
+  }
+
+  button {
+    height: 70px;
+    width: 70px;
+    font-size: 2rem;
+  }
+}
